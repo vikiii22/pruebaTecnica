@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Coin } from '../../../interfaces/criptos.interface';
+import { CriptosService } from '../../../services/criptos.service';
 
 @Component({
   selector: 'app-lista',
@@ -8,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaComponent implements OnInit {
 
-  constructor() { }
+  coins:Coin[]=[];
+
+  constructor( private criptoService:CriptosService) { }
 
   ngOnInit(): void {
+    this.criptoService.getCoins()
+      .subscribe( resp => (this.coins=resp));
   }
 
 }

@@ -7,6 +7,8 @@ import { CrearComponent } from './pages/crear/crear.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CriptosRoutingModule } from './criptos-routing.module';
 import { ListaComponent } from './pages/lista/lista.component';
+import { TarjetaCriptosComponent } from './pages/lista/tarjeta-criptos/tarjeta-criptos.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -15,7 +17,8 @@ import { ListaComponent } from './pages/lista/lista.component';
     PrincipalComponent,
     BuscarComponent,
     CrearComponent,
-    ListaComponent
+    ListaComponent,
+    TarjetaCriptosComponent
   ],
   exports:[
     PrincipalComponent,
@@ -26,7 +29,8 @@ import { ListaComponent } from './pages/lista/lista.component';
     CommonModule,
     MaterialModule,
     FlexLayoutModule,
-    CriptosRoutingModule
+    CriptosRoutingModule,
+    HttpClientModule
   ]
 })
 export class CriptosModule { }
