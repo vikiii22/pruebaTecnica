@@ -6,6 +6,7 @@ import { BuscarComponent } from './pages/buscar/buscar.component';
 import { CrearComponent } from './pages/crear/crear.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CriptosRoutingModule } from './criptos-routing.module';
+import { ListaComponent } from './pages/lista/lista.component';
 
 
 
@@ -13,11 +14,13 @@ import { CriptosRoutingModule } from './criptos-routing.module';
   declarations: [
     PrincipalComponent,
     BuscarComponent,
-    CrearComponent
+    CrearComponent,
+    ListaComponent
   ],
   exports:[
     PrincipalComponent,
-    BuscarComponent
+    BuscarComponent,
+    ListaComponent
   ],
   imports: [
     CommonModule,

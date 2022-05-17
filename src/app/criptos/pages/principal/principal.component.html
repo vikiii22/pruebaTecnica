@@ -7,8 +7,9 @@
             </button>
         </mat-toolbar>
         <mat-nav-list>
-            <a [routerLink]="['/criptos/principal']" mat-list-item (click)="sidenav.toggle()"><span>Principal</span></a>
-            <a [routerLink]="['/criptos/buscar']" mat-list-item (click)="sidenav.toggle()"><span>Buscar</span></a>
+            <a [routerLink]="['/criptos/lista']" mat-list-item (click)="sidenav.toggle()"><mat-icon color="primary">rocket_launch</mat-icon><span>Lista de criptos</span></a>
+            <a [routerLink]="['/criptos/buscar']" mat-list-item (click)="sidenav.toggle()"><mat-icon color="primary">search</mat-icon><span>Buscar</span></a>
+            <a [routerLink]="['/criptos/crear']" mat-list-item (click)="sidenav.toggle()"><mat-icon color="primary">create</mat-icon><span>Añadir</span></a>
         </mat-nav-list>
     </mat-sidenav>
     <mat-toolbar>
