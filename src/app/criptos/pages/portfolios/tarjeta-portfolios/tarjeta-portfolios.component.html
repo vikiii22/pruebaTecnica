@@ -1,0 +1,10 @@
+<div fxLayout="row wrap" fxLayoutAlign="center">
+    <div fxFlex="20" *ngFor="let port of portfolios" fxFlex.lg="15" fxFlex.sm="30">
+        <mat-card>
+            <mat-card-title>{{port.name}}</mat-card-title>
+            <mat-card-content>
+                <h3>{{port.id}}</h3>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

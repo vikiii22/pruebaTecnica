@@ -9,6 +9,8 @@ import { CriptosRoutingModule } from './criptos-routing.module';
 import { ListaComponent } from './pages/lista/lista.component';
 import { TarjetaCriptosComponent } from './pages/lista/tarjeta-criptos/tarjeta-criptos.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PortfoliosComponent } from './pages/portfolios/portfolios.component';
+import { TarjetaPortfoliosComponent } from './pages/portfolios/tarjeta-portfolios/tarjeta-portfolios.component';
 
 
 
@@ -18,7 +20,9 @@ import { HttpClientModule } from '@angular/common/http';
     BuscarComponent,
     CrearComponent,
     ListaComponent,
-    TarjetaCriptosComponent
+    TarjetaCriptosComponent,
+    PortfoliosComponent,
+    TarjetaPortfoliosComponent
   ],
   exports:[
     PrincipalComponent,

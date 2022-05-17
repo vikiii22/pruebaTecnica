@@ -4,6 +4,7 @@ import { PrincipalComponent } from './pages/principal/principal.component';
 import { BuscarComponent } from './pages/buscar/buscar.component';
 import { CrearComponent } from './pages/crear/crear.component';
 import { ListaComponent } from './pages/lista/lista.component';
+import { PortfoliosComponent } from './pages/portfolios/portfolios.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
       {
         path: 'crear',
         component:CrearComponent
+      },
+      {
+        path:'portfolios',
+        component:PortfoliosComponent
       },
       {
         path: '**',
