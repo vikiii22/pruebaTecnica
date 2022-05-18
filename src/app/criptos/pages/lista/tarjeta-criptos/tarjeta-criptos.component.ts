@@ -4,7 +4,17 @@ import { Coin } from '../../../../interfaces/criptos.interface';
 @Component({
   selector: 'app-tarjeta-criptos',
   templateUrl: './tarjeta-criptos.component.html',
-  styles: [
+  styles: [`
+    mat-card{
+      margin:5px;
+    }
+    img{
+      width:250px;
+      height:250px;
+      margin-right:auto;
+      margin-left:auto;
+    }
+  `
   ]
 })
 export class TarjetaCriptosComponent implements OnInit {

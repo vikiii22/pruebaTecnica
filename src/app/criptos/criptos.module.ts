@@ -11,6 +11,7 @@ import { TarjetaCriptosComponent } from './pages/lista/tarjeta-criptos/tarjeta-c
 import { HttpClientModule } from '@angular/common/http';
 import { PortfoliosComponent } from './pages/portfolios/portfolios.component';
 import { TarjetaPortfoliosComponent } from './pages/portfolios/tarjeta-portfolios/tarjeta-portfolios.component';
+import { ImagenPipe } from './pipes/imagen.pipe';
 
 
 
@@ -22,7 +23,8 @@ import { TarjetaPortfoliosComponent } from './pages/portfolios/tarjeta-portfolio
     ListaComponent,
     TarjetaCriptosComponent,
     PortfoliosComponent,
-    TarjetaPortfoliosComponent
+    TarjetaPortfoliosComponent,
+    ImagenPipe
   ],
   exports:[
     PrincipalComponent,
