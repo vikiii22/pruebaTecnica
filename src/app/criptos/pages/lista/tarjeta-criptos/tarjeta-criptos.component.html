@@ -1,0 +1,11 @@
+<div fxLayout="row wrap" fxLayoutAlign="center">
+    <div fxFlex="20" *ngFor="let coin of coins" fxFlex.lg="15" fxFlex.sm="30">
+        <mat-card>
+            <img mat-card-image [src]="coin | imagen">
+            <mat-card-title>{{coin.acronym}}</mat-card-title>
+            <mat-card-content>
+                <h3>{{coin.name}}</h3>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
