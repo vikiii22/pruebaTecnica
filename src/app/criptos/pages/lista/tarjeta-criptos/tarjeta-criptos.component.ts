@@ -14,6 +14,9 @@ import { Coin } from '../../../../interfaces/criptos.interface';
       margin-right:auto;
       margin-left:auto;
     }
+    button{
+      margin:5px;
+    }
   `
   ]
 })

@@ -5,7 +5,17 @@ import { CriptosService } from '../../../services/criptos.service';
 @Component({
   selector: 'app-lista',
   templateUrl: './lista.component.html',
-  styles: [
+  styles: [`
+    .lista{
+      display:flex
+    }
+    .btn-agregar{
+      position:absolute;
+      right:0;
+      margin-top:1%;
+      margin-right:1%;
+    }
+  `
   ]
 })
 export class ListaComponent implements OnInit {

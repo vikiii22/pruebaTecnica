@@ -13,6 +13,9 @@ import { CriptosService } from '../../../../services/criptos.service';
       height:500px;
       margin-left:10px;
     }
+    span{
+      margin-left:10px;
+    }
   `
   ]
 })
