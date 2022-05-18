@@ -16,4 +16,8 @@ export class CriptosService {
   getPortfolios(){
     return this.http.get<Portfolio[]>('http://localhost:3000/portfolios');
   }
+
+  getCoinsId( id:number ){
+    return this.http.get<Coin>('http://localhost:3000/coins/'+id)
+  }
 }
