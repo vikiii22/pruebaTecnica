@@ -28,4 +28,8 @@ export class CriptosService {
   deleteCripto( id:number ){
     return this.http.delete<Coin>('http://localhost:3000/coins/'+id);
   }
+
+  getLinesOfPortfolios( id:number ){
+    return this.http.get<Portfolio>('http://localhost:3000/portfolios/'+id+'/lines');
+  }
 }

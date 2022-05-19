@@ -2,7 +2,7 @@
     <div fxFlex="20" *ngFor="let port of portfolios" fxFlex.lg="15" fxFlex.sm="30">
         <mat-card>
             <mat-card-title>{{port.name}}</mat-card-title>
-            <button mat-icon-button><mat-icon>preview</mat-icon></button>
+            <button mat-icon-button [routerLink]="['./ver-portfolio', port.id]"><mat-icon>preview</mat-icon></button>
         </mat-card>
     </div>
 </div>

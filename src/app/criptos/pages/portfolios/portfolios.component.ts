@@ -12,7 +12,7 @@ export class PortfoliosComponent implements OnInit {
 
   portfolios:Portfolio[]=[]
 
-  constructor( private criptoService:CriptosService) { }
+  constructor( private criptoService:CriptosService ) { }
 
   ngOnInit(): void {
     this.criptoService.getPortfolios()
