@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Portfolio } from 'src/app/interfaces/criptos.interface';
 import { CriptosService } from 'src/app/services/criptos.service';
 import { switchMap } from 'rxjs';
+import { Line } from '../../../../interfaces/criptos.interface';
 
 @Component({
   selector: 'app-ver-portfolios',
@@ -12,17 +13,17 @@ import { switchMap } from 'rxjs';
 })
 export class VerPortfoliosComponent implements OnInit {
 
-  portfolios!:Portfolio;
+  lines: Line[]=[];
 
-  constructor(private activatedRoute:ActivatedRoute, private coinService:CriptosService) { }
+  constructor(private activatedRoute: ActivatedRoute, private coinService: CriptosService) { }
 
   ngOnInit(): void {
     this.activatedRoute.params
       .pipe(
-        switchMap(({id})=>this.coinService.getLinesOfPortfolios(id))
+        switchMap(({ id }) => this.coinService.getLinesOfPortfolios(id))
       )
       .subscribe(
-        resp => (this.portfolios=resp)
+        resp => (this.lines = resp)
       )
   };
 

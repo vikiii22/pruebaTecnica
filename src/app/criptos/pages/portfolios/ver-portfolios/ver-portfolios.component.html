@@ -1,1 +1,5 @@
-<p>{{portfolios | json}}</p>
+<div fxLayout="column" fxLayoutAlign="space-evenly strech" fxLayoutGap="20px" *ngFor="let line of lines">
+    <mat-card>
+        {{line.portfolioId}}
+    </mat-card>
+</div>

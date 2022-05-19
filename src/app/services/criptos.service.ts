@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Coin, Portfolio } from '../interfaces/criptos.interface';
+import { Coin, Portfolio, Line } from '../interfaces/criptos.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -30,6 +30,10 @@ export class CriptosService {
   }
 
   getLinesOfPortfolios( id:number ){
-    return this.http.get<Portfolio>('http://localhost:3000/portfolios/'+id+'/lines');
+    return this.http.get<Line[]>(`http://localhost:3000/portfolios/${id}/lines`);
+  }
+
+  getLines(){
+    return this.http.get<Line>('http://localhost:3000/lines');
   }
 }
