@@ -14,7 +14,7 @@ export interface Criptos {
 }
 
 export interface Coin {
-    id:      number;
+    id?:      number;
     acronym: string;
     name:    string;
 }

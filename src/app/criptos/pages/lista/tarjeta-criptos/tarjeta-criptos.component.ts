@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Coin } from '../../../../interfaces/criptos.interface';
+import { CriptosService } from '../../../../services/criptos.service';
 
 @Component({
   selector: 'app-tarjeta-criptos',
@@ -14,6 +15,9 @@ import { Coin } from '../../../../interfaces/criptos.interface';
       margin-right:auto;
       margin-left:auto;
     }
+    button{
+      margin:5px;
+    }
   `
   ]
 })
@@ -21,9 +25,15 @@ export class TarjetaCriptosComponent implements OnInit {
 
   @Input() coins:Coin[]=[];
 
-  constructor() { }
+  constructor( private criptoService:CriptosService ) { }
 
   ngOnInit(): void {
+  }
+
+  eliminar( id:number ){
+    this.criptoService.deleteCripto(id)
+      .subscribe();
+    window.location.reload();
   }
 
 }

@@ -49,6 +49,16 @@
       "id": 10,
       "acronym": "ETC",
       "name": "Ethereum classic"
+    },
+    {
+      "name": "bebecita",
+      "acronym": "jse",
+      "id": 11
+    },
+    {
+      "name": "Quevedo",
+      "acronym": "QVD",
+      "id": 13
     }
   ],
   "portfolios": [

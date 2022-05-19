@@ -12,6 +12,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { PortfoliosComponent } from './pages/portfolios/portfolios.component';
 import { TarjetaPortfoliosComponent } from './pages/portfolios/tarjeta-portfolios/tarjeta-portfolios.component';
 import { ImagenPipe } from './pipes/imagen.pipe';
+import { VerMasComponent } from './pages/lista/ver-mas/ver-mas.component';
+import { AgregarComponent } from './pages/lista/agregar/agregar.component';
+import { FormsModule } from '@angular/forms';
+import { VerPortfoliosComponent } from './pages/portfolios/ver-portfolios/ver-portfolios.component';
 
 
 
@@ -24,7 +28,10 @@ import { ImagenPipe } from './pipes/imagen.pipe';
     TarjetaCriptosComponent,
     PortfoliosComponent,
     TarjetaPortfoliosComponent,
-    ImagenPipe
+    ImagenPipe,
+    VerMasComponent,
+    AgregarComponent,
+    VerPortfoliosComponent
   ],
   exports:[
     PrincipalComponent,
@@ -36,7 +43,8 @@ import { ImagenPipe } from './pipes/imagen.pipe';
     MaterialModule,
     FlexLayoutModule,
     CriptosRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ]
 })
 export class CriptosModule { }

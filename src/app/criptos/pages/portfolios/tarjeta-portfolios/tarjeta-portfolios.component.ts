@@ -4,7 +4,11 @@ import { Portfolio } from '../../../../interfaces/criptos.interface';
 @Component({
   selector: 'app-tarjeta-portfolios',
   templateUrl: './tarjeta-portfolios.component.html',
-  styles: [
+  styles: [`
+     mat-card{
+      margin:5px;
+    }
+  `
   ]
 })
 export class TarjetaPortfoliosComponent implements OnInit {

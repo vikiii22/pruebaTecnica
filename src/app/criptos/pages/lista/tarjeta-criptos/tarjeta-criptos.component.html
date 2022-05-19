@@ -6,6 +6,12 @@
             <mat-card-content>
                 <h3>{{coin.name}}</h3>
             </mat-card-content>
+            <mat-card-footer>
+                <button mat-stroked-button color="warn">Editar</button>
+                <button mat-flat-button color="primary" 
+                    [routerLink]="['./', coin.id]">Ver más</button>
+                <button mat-raised-button color="warn" (click)="eliminar( coin.id! )">Eliminar</button>
+            </mat-card-footer>
         </mat-card>
     </div>
 </div>
