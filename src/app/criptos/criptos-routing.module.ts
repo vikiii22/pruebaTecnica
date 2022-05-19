@@ -6,6 +6,7 @@ import { CrearComponent } from './pages/crear/crear.component';
 import { ListaComponent } from './pages/lista/lista.component';
 import { PortfoliosComponent } from './pages/portfolios/portfolios.component';
 import { VerMasComponent } from './pages/lista/ver-mas/ver-mas.component';
+import { AgregarComponent } from './pages/lista/agregar/agregar.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
       {
         path:'portfolios',
         component:PortfoliosComponent
+      },
+      {
+        path:'lista/agregar',
+        component:AgregarComponent
       },
       {
         path:'lista/:id',

@@ -13,6 +13,8 @@ import { PortfoliosComponent } from './pages/portfolios/portfolios.component';
 import { TarjetaPortfoliosComponent } from './pages/portfolios/tarjeta-portfolios/tarjeta-portfolios.component';
 import { ImagenPipe } from './pipes/imagen.pipe';
 import { VerMasComponent } from './pages/lista/ver-mas/ver-mas.component';
+import { AgregarComponent } from './pages/lista/agregar/agregar.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -26,7 +28,8 @@ import { VerMasComponent } from './pages/lista/ver-mas/ver-mas.component';
     PortfoliosComponent,
     TarjetaPortfoliosComponent,
     ImagenPipe,
-    VerMasComponent
+    VerMasComponent,
+    AgregarComponent
   ],
   exports:[
     PrincipalComponent,
@@ -38,7 +41,8 @@ import { VerMasComponent } from './pages/lista/ver-mas/ver-mas.component';
     MaterialModule,
     FlexLayoutModule,
     CriptosRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ]
 })
 export class CriptosModule { }

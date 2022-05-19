@@ -20,4 +20,12 @@ export class CriptosService {
   getCoinsId( id:number ){
     return this.http.get<Coin>('http://localhost:3000/coins/'+id)
   }
+
+  setNuevaCripto( cripto:Coin ){
+    return this.http.post<Coin>('http://localhost:3000/coins', cripto)
+  }
+
+  deleteCripto( id:number ){
+    return this.http.delete<Coin>('http://localhost:3000/coins/'+id);
+  }
 }
