@@ -1,8 +1,8 @@
-import { Component, Input, OnInit, Pipe } from '@angular/core';
+import { Component, Input, OnDestroy, Pipe } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Portfolio } from 'src/app/interfaces/criptos.interface';
 import { CriptosService } from 'src/app/services/criptos.service';
-import { map, switchMap } from 'rxjs';
+import { map, Observable, Subscription, switchMap } from 'rxjs';
 import { Line, Coin } from '../../../../interfaces/criptos.interface';
 
 @Component({
@@ -12,16 +12,20 @@ import { Line, Coin } from '../../../../interfaces/criptos.interface';
     mat-card{
       margin:10px;
     }
+    mat-card-subtitle{
+      cursor:default;
+    }
   `
   ]
 })
-export class VerPortfoliosComponent implements OnInit {
+export class VerPortfoliosComponent implements OnDestroy {
 
   lines: Line[]=[];
   moneda:Coin[]=[];
+  subscription!:Subscription;
 
   constructor(private activatedRoute: ActivatedRoute, private coinService: CriptosService) { 
-    this.activatedRoute.params
+    this.subscription = this.activatedRoute.params
       .pipe(
         switchMap(({ id }) => this.coinService.getLinesOfPortfolios(id))
       )
@@ -36,8 +40,8 @@ export class VerPortfoliosComponent implements OnInit {
       );
   }
 
-  ngOnInit(): void {
-    
-  };
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+  }
 
 }

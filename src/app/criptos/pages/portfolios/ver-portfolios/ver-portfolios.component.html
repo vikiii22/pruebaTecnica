@@ -1,10 +1,10 @@
 <div fxLayout="column" fxLayoutAlign="space-evenly center" fxLayoutGap="20px" *ngFor="let line of lines">
     <mat-card>
-        <mat-card-title>Linea {{line.id}}</mat-card-title>
+        <mat-card-title>Line {{line.id}}</mat-card-title>
         <mat-card-content>Portfolio {{line.portfolioId}}</mat-card-content>
         <mat-card-subtitle [routerLink]="['/criptos/lista', line.coinId]" *ngFor="let m of moneda"><span *ngIf="line.coinId===m.id">Moneda {{m.name}}</span></mat-card-subtitle>
         <mat-card-subtitle>Amount {{line.amount}}</mat-card-subtitle>
-        <button mat-flat-button color="warn">Eliminar linea</button>
+        <button mat-flat-button color="warn">Eliminar line</button>
     </mat-card>
 </div>
 <button mat-stroked-button color="accent" [routerLink]="['/criptos/portfolios']">Volver a Portfolios</button>
