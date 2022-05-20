@@ -1,8 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Pipe } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Portfolio } from 'src/app/interfaces/criptos.interface';
 import { CriptosService } from 'src/app/services/criptos.service';
-import { switchMap } from 'rxjs';
+import { map, switchMap } from 'rxjs';
 import { Line, Coin } from '../../../../interfaces/criptos.interface';
 
 @Component({
@@ -20,19 +20,24 @@ export class VerPortfoliosComponent implements OnInit {
   lines: Line[]=[];
   moneda:Coin[]=[];
 
-  constructor(private activatedRoute: ActivatedRoute, private coinService: CriptosService) { }
-
-  ngOnInit(): void {
+  constructor(private activatedRoute: ActivatedRoute, private coinService: CriptosService) { 
     this.activatedRoute.params
       .pipe(
         switchMap(({ id }) => this.coinService.getLinesOfPortfolios(id))
       )
       .subscribe(
-        resp => (this.lines = resp)
+        resp => {
+          (this.lines = resp);
+          this.lines.forEach(e => {
+            coinService.getCoinsId(e.coinId)
+              .subscribe( resp => (this.moneda.push(resp)))
+          })
+        }
       );
+  }
 
-      this.coinService.getCoins()
-        .subscribe( resp => (this.moneda=resp))
+  ngOnInit(): void {
+    
   };
 
 }
