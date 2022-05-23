@@ -19,7 +19,7 @@ import { Line, Coin } from '../../../../interfaces/criptos.interface';
   ]
 })
 export class VerPortfoliosComponent implements OnDestroy {
-
+  
   lines: Line[]=[];
   moneda:Coin[]=[];
   subscription!:Subscription;

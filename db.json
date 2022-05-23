@@ -73,6 +73,10 @@
     {
       "id": 3,
       "name": "Portfolio 3"
+    },
+    {
+      "name": "Portafolio 4",
+      "id": 4
     }
   ],
   "lines": [
@@ -129,6 +133,144 @@
       "portfolioId": 3,
       "coinId": 10,
       "amount": 10
+    },
+    {
+      "coinId": 6,
+      "amount": "10",
+      "portfolioId": "4",
+      "id": 10
+    },
+    {
+      "coinId": 13,
+      "amount": "10",
+      "portfolioId": "4",
+      "id": 11
+    },
+    {
+      "coinId": 0,
+      "amount": 0,
+      "portfolioId": "undefined",
+      "id": 12
+    },
+    {
+      "coinId": 0,
+      "amount": 0,
+      "portfolioId": "undefined",
+      "id": 13
+    },
+    {
+      "coinId": 0,
+      "amount": 0,
+      "portfolioId": "undefined",
+      "id": 14
+    },
+    {
+      "coinId": 0,
+      "amount": 0,
+      "portfolioId": "undefined",
+      "id": 15
+    },
+    {
+      "coinId": 0,
+      "amount": 0,
+      "portfolioId": "undefined",
+      "id": 16
+    },
+    {
+      "coinId": 0,
+      "amount": 0,
+      "portfolioId": "undefined",
+      "id": 17
+    },
+    {
+      "coinId": "7",
+      "amount": "25",
+      "portfolioId": "undefined",
+      "id": 18
+    },
+    {
+      "coinId": 5,
+      "amount": 23,
+      "portfolioId": "undefined",
+      "id": 19
+    },
+    {
+      "coinId": 5,
+      "amount": 23,
+      "portfolioId": "undefined",
+      "id": 20
+    },
+    {
+      "coinId": 0,
+      "amount": 0,
+      "portfolioId": "undefined",
+      "id": 21
+    },
+    {
+      "coinId": 435,
+      "amount": 0,
+      "portfolioId": "undefined",
+      "id": 22
+    },
+    {
+      "coinId": 5,
+      "amount": 10,
+      "portfolioId": "undefined",
+      "id": 23
+    },
+    {
+      "coinId": 0,
+      "amount": 0,
+      "portfolioId": "undefined",
+      "id": 24
+    },
+    {
+      "coinId": 0,
+      "amount": 0,
+      "portfolioId": "undefined",
+      "id": 25
+    },
+    {
+      "coinId": 44,
+      "amount": 4,
+      "portfolioId": "undefined",
+      "id": 26
+    },
+    {
+      "coinId": 4,
+      "amount": 10,
+      "portfolioId": "undefined",
+      "id": 27
+    },
+    {
+      "coinId": 6,
+      "amount": 45,
+      "portfolioId": "undefined",
+      "id": 28
+    },
+    {
+      "coinId": 6,
+      "amount": 45,
+      "portfolioId": "undefined",
+      "id": 29
+    },
+    {
+      "coinId": 6,
+      "amount": 45,
+      "portfolioId": "undefined",
+      "id": 30
+    },
+    {
+      "coinId": 0,
+      "amount": 0,
+      "portfolioId": "undefined",
+      "id": 31
+    },
+    {
+      "coinId": 5,
+      "amount": 45,
+      "portfolioId": "4",
+      "id": 32
     }
   ]
 }

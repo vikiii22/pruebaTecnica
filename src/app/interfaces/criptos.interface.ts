@@ -20,14 +20,14 @@ export interface Coin {
 }
 
 export interface Line {
-    id:          number;
-    portfolioId: number;
+    id?:          number;
+    portfolioId?: number;
     coinId:      number;
     amount:      number;
 }
 
 export interface Portfolio {
-    id:   number;
+    id?:   number;
     name: string;
 }
 
