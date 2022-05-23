@@ -48,4 +48,8 @@ export class CriptosService {
   setLine( id:number, line:Line ){
     return this.http.post<Line>(`http://localhost:3000/portfolios/${id}/lines`, line);
   }
+
+  deleteLine(id:number){
+    return this.http.delete<Line>('http://localhost:3000/lines/'+id)
+  }
 }

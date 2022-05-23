@@ -44,4 +44,10 @@ export class VerPortfoliosComponent implements OnDestroy {
     this.subscription.unsubscribe();
   }
 
+  eliminar(id:number){
+    this.coinService.deleteLine(id)
+      .subscribe();
+    window.location.reload();
+  }
+
 }

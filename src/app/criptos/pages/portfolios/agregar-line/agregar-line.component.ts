@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CriptosService } from 'src/app/services/criptos.service';
-import { switchMap } from 'rxjs';
-import { Line } from '../../../../interfaces/criptos.interface';
+import { switchMap, Subscription } from 'rxjs';
+import { Line, Coin } from '../../../../interfaces/criptos.interface';
 
 @Component({
   selector: 'app-agregar-line',
@@ -12,28 +12,36 @@ import { Line } from '../../../../interfaces/criptos.interface';
 })
 export class AgregarLineComponent implements OnInit {
 
-  line:Line={
-    coinId:0,
-    amount:0,
-    portfolioId:0
+  line: Line = {
+    coinId: 0,
+    amount: 0,
+    portfolioId: 0
   }
-  id=0;
+  id = 0;
+  subscription!:Subscription;
+  @Input() moneda:Coin[]=[];
 
   constructor(private activatedRoute: ActivatedRoute, private coinService: CriptosService) {
-    activatedRoute.queryParams.subscribe(
-      params=> {
-        this.id=params['id'];
-      }
-    )
-      console.log(this.id);
+    this.subscription = this.activatedRoute.parent!.params
+      .pipe(
+        switchMap(({ id }) => this.id = id)
+      )
+      .subscribe();
+
+      console.log(this.moneda.length)
   }
 
   ngOnInit(): void {
   }
 
-  guardar(){
-    this.coinService.setLine(this.line.portfolioId!, this.line)
-      .subscribe( resp => console.log(resp));
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+  }
+
+  guardar() {
+    this.coinService.setLine(this.id, this.line)
+      .subscribe(resp => console.log(resp));
+    window.location.reload();
   }
 
 }

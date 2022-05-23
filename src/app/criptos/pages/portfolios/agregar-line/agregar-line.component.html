@@ -10,7 +10,9 @@
     </mat-form-field>
     <mat-form-field fxFlex="100">
         <mat-label>Portfolio</mat-label>
-        <input matInput type="number" required [(ngModel)]="line.portfolioId">
+        <input matInput type="number" required [(ngModel)]="id" disabled="true">
     </mat-form-field>
 </div>
-<button mat-stroked-button color="warn" (click)="guardar()"><mat-icon color="primary">save</mat-icon></button>
+<button mat-stroked-button color="warn" (click)="guardar()">
+    <mat-icon color="primary">save</mat-icon>
+</button>
