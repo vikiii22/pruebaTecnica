@@ -9,6 +9,7 @@ import { VerMasComponent } from './pages/lista/ver-mas/ver-mas.component';
 import { AgregarComponent } from './pages/lista/agregar/agregar.component';
 import { VerPortfoliosComponent } from './pages/portfolios/ver-portfolios/ver-portfolios.component';
 import { AgregarLineComponent } from './pages/portfolios/agregar-line/agregar-line.component';
+import { EditarPortfoliosComponent } from './pages/portfolios/editar-portfolios/editar-portfolios.component';
 
 const routes: Routes = [
   {
@@ -38,6 +39,10 @@ const routes: Routes = [
       {
         path:'lista/:id',
         component:VerMasComponent
+      },
+      {
+        path:'portfolios/editar/:id',
+        component:EditarPortfoliosComponent
       },
       {
         path:'portfolios/ver-portfolio/:id',

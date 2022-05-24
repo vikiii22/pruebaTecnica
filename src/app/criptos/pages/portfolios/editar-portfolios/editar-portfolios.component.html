@@ -1,0 +1,8 @@
+<h1>Editar Portfolio</h1>
+<div fxLayoutGap="50px">
+    <mat-form-field fxFlex="100">
+        <mat-label>Nombre</mat-label>
+        <input matInput type="text" required [(ngModel)]="portfolio.name">
+    </mat-form-field>
+</div>
+<button mat-stroked-button color="warn" (click)="guardar()"><mat-icon color="primary">save</mat-icon></button>

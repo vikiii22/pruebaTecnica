@@ -17,6 +17,7 @@ import { AgregarComponent } from './pages/lista/agregar/agregar.component';
 import { FormsModule } from '@angular/forms';
 import { VerPortfoliosComponent } from './pages/portfolios/ver-portfolios/ver-portfolios.component';
 import { AgregarLineComponent } from './pages/portfolios/agregar-line/agregar-line.component';
+import { EditarPortfoliosComponent } from './pages/portfolios/editar-portfolios/editar-portfolios.component';
 
 
 
@@ -33,7 +34,8 @@ import { AgregarLineComponent } from './pages/portfolios/agregar-line/agregar-li
     VerMasComponent,
     AgregarComponent,
     VerPortfoliosComponent,
-    AgregarLineComponent
+    AgregarLineComponent,
+    EditarPortfoliosComponent
   ],
   exports:[
     PrincipalComponent,

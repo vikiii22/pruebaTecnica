@@ -45,6 +45,14 @@ export class CriptosService {
     return this.http.delete<Portfolio>('http://localhost:3000/portfolios/'+id);
   }
 
+  getPortfolioId( id:number ){
+    return this.http.get<Portfolio>('http://localhost:3000/portfolios/'+id);
+  }
+
+  updatePortfolio( portfolio:Portfolio ){
+    return this.http.put<Portfolio>(`http://localhost:3000/portfolios/${portfolio.id}`, portfolio);
+  }
+
   setLine( id:number, line:Line ){
     return this.http.post<Line>(`http://localhost:3000/portfolios/${id}/lines`, line);
   }
