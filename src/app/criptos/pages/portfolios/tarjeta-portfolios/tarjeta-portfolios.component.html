@@ -3,6 +3,8 @@
         <mat-card>
             <mat-card-title>{{port.name}}</mat-card-title>
             <button mat-icon-button [routerLink]="['./ver-portfolio', port.id]"><mat-icon>preview</mat-icon></button>
+            <button mat-icon-button [routerLink]="['./editar', port.id]"><mat-icon>edit</mat-icon></button>
+            <button mat-icon-button (click)="eliminar(port.id!)"><mat-icon>delete</mat-icon></button>
         </mat-card>
     </div>
 </div>

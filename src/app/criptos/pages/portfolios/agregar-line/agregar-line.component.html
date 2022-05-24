@@ -1,0 +1,18 @@
+<h1>Comprar nueva moneda</h1>
+<div fxLayoutGap="50px">
+    <mat-form-field fxFlex="100">
+        <mat-label>Coin</mat-label>
+        <input matInput type="number" required [(ngModel)]="line.coinId">
+    </mat-form-field>
+    <mat-form-field fxFlex="100">
+        <mat-label>Amount</mat-label>
+        <input matInput type="number" required [(ngModel)]="line.amount">
+    </mat-form-field>
+    <mat-form-field fxFlex="100">
+        <mat-label>Portfolio</mat-label>
+        <input matInput type="number" required [(ngModel)]="id" disabled="true">
+    </mat-form-field>
+</div>
+<button mat-stroked-button color="warn" (click)="guardar()">
+    <mat-icon color="primary">save</mat-icon>
+</button>

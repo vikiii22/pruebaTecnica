@@ -8,6 +8,8 @@ import { PortfoliosComponent } from './pages/portfolios/portfolios.component';
 import { VerMasComponent } from './pages/lista/ver-mas/ver-mas.component';
 import { AgregarComponent } from './pages/lista/agregar/agregar.component';
 import { VerPortfoliosComponent } from './pages/portfolios/ver-portfolios/ver-portfolios.component';
+import { AgregarLineComponent } from './pages/portfolios/agregar-line/agregar-line.component';
+import { EditarPortfoliosComponent } from './pages/portfolios/editar-portfolios/editar-portfolios.component';
 
 const routes: Routes = [
   {
@@ -39,8 +41,18 @@ const routes: Routes = [
         component:VerMasComponent
       },
       {
+        path:'portfolios/editar/:id',
+        component:EditarPortfoliosComponent
+      },
+      {
         path:'portfolios/ver-portfolio/:id',
-        component:VerPortfoliosComponent
+        component:VerPortfoliosComponent,
+        children:[
+          {
+            path:'agregar-line',
+            component:AgregarLineComponent
+          }
+        ]
       },
       {
         path: '**',

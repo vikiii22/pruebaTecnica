@@ -36,4 +36,32 @@ export class CriptosService {
   getLines(){
     return this.http.get<Line>('http://localhost:3000/lines');
   }
+
+  setNuevoPortfolio( portfolio:Portfolio ){
+    return this.http.post<Portfolio>('http://localhost:3000/portfolios', portfolio);
+  }
+
+  deletePortfolio( id:number ){
+    return this.http.delete<Portfolio>('http://localhost:3000/portfolios/'+id);
+  }
+
+  getPortfolioId( id:number ){
+    return this.http.get<Portfolio>('http://localhost:3000/portfolios/'+id);
+  }
+
+  updatePortfolio( portfolio:Portfolio ){
+    return this.http.put<Portfolio>(`http://localhost:3000/portfolios/${portfolio.id}`, portfolio);
+  }
+
+  setLine( id:number, line:Line ){
+    return this.http.post<Line>(`http://localhost:3000/portfolios/${id}/lines`, line);
+  }
+
+  deleteLine(id:number){
+    return this.http.delete<Line>('http://localhost:3000/lines/'+id)
+  }
+
+  getSugerencias( termino:string ){
+    return this.http.get<Coin[]>(`http://localhost:3000/coins?q=${termino}&_limit=3`)
+  }
 }

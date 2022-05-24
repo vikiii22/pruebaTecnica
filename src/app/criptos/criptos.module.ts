@@ -16,6 +16,8 @@ import { VerMasComponent } from './pages/lista/ver-mas/ver-mas.component';
 import { AgregarComponent } from './pages/lista/agregar/agregar.component';
 import { FormsModule } from '@angular/forms';
 import { VerPortfoliosComponent } from './pages/portfolios/ver-portfolios/ver-portfolios.component';
+import { AgregarLineComponent } from './pages/portfolios/agregar-line/agregar-line.component';
+import { EditarPortfoliosComponent } from './pages/portfolios/editar-portfolios/editar-portfolios.component';
 
 
 
@@ -31,7 +33,9 @@ import { VerPortfoliosComponent } from './pages/portfolios/ver-portfolios/ver-po
     ImagenPipe,
     VerMasComponent,
     AgregarComponent,
-    VerPortfoliosComponent
+    VerPortfoliosComponent,
+    AgregarLineComponent,
+    EditarPortfoliosComponent
   ],
   exports:[
     PrincipalComponent,

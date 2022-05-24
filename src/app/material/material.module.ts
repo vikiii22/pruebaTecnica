@@ -7,6 +7,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import {MatFormFieldModule} from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input'
+import { MatAutocompleteModule } from '@angular/material/autocomplete'
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { MatInputModule } from '@angular/material/input'
     MatIconModule,
     MatListModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatAutocompleteModule
   ]
 })
 export class MaterialModule { }
