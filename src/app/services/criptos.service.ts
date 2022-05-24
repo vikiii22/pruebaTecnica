@@ -60,4 +60,8 @@ export class CriptosService {
   deleteLine(id:number){
     return this.http.delete<Line>('http://localhost:3000/lines/'+id)
   }
+
+  getSugerencias( termino:string ){
+    return this.http.get<Coin[]>(`http://localhost:3000/coins?q=${termino}&_limit=3`)
+  }
 }

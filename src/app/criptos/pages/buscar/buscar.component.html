@@ -1,1 +1,20 @@
-<p>buscar works!</p>
+<div fxLayout="column">
+    <div>
+        <h1>Buscador de Criptomonedas</h1>
+        <mat-divider></mat-divider>
+    </div>
+    <div fxLayout="column">
+        <h3>Buscador</h3>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Criptomoneda</mat-label>
+            <input type="text" placeholder="Pick one" aria-label="Number" matInput [matAutocomplete]="auto" [(ngModel)]="termino" (input)="buscando()">
+            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" (optionSelected)="seleccionado( $event )">
+                <mat-option #mostrar *ngFor="let cripto of cripto" [value]="cripto">
+                    {{cripto.name}}
+                </mat-option>
+                <mat-option *ngIf="cripto.length == 0">No se encontró nada relacionado con {{termino}}</mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+    </div>
+</div>
+<img *ngIf="criptoElegida != null" [src]="criptoElegida | imagen">
