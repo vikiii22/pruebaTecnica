@@ -77,6 +77,10 @@
     {
       "name": "Portafolio 4",
       "id": 4
+    },
+    {
+      "name": "Nuevo",
+      "id": 5
     }
   ],
   "lines": [
@@ -169,6 +173,30 @@
       "amount": 259,
       "portfolioId": "4",
       "id": 15
+    },
+    {
+      "coinId": 1,
+      "amount": 1000,
+      "portfolioId": "5",
+      "id": 16
+    },
+    {
+      "coinId": 2,
+      "amount": 150,
+      "portfolioId": "5",
+      "id": 17
+    },
+    {
+      "coinId": 5,
+      "amount": 2943,
+      "portfolioId": "5",
+      "id": 19
+    },
+    {
+      "coinId": 8,
+      "amount": 10000,
+      "portfolioId": "5",
+      "id": 20
     }
   ]
 }

@@ -12,6 +12,6 @@
             <button mat-flat-button color="warn" (click)="eliminar(line.id!)">Eliminar line</button>
         </mat-card>
     </div>
-    <span>Total invertido {{total}} USD</span>
+    <span *ngIf="total != 0">Total invertido {{total}} USD</span>
 </div>
 <button mat-stroked-button color="accent" [routerLink]="['/criptos/portfolios']">Volver a Portfolios</button>

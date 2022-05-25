@@ -33,8 +33,8 @@ export class VerPortfoliosComponent implements OnDestroy {
       .subscribe(
         resp => {
           (this.lines = resp);
-          this.lines.forEach( dineroTotal => this.total+=dineroTotal.amount);
           this.lines.forEach(e => {
+            this.total+=e.amount;
             coinService.getCoinsId(e.coinId)
               .subscribe( resp => (this.moneda.push(resp)))
           })
