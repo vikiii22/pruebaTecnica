@@ -136,13 +136,13 @@
     },
     {
       "coinId": 6,
-      "amount": "10",
+      "amount": 10,
       "portfolioId": "4",
       "id": 10
     },
     {
       "coinId": 13,
-      "amount": "10",
+      "amount": 10,
       "portfolioId": "4",
       "id": 11
     },
@@ -163,6 +163,12 @@
       "amount": 1.2,
       "portfolioId": "2",
       "id": 14
+    },
+    {
+      "coinId": 2,
+      "amount": 259,
+      "portfolioId": "4",
+      "id": 15
     }
   ]
 }
